@@ -13,10 +13,6 @@ export function handler(event, context, callback) {
   var url = "https://api.netlify.com/api/v1/forms/" + process.env.ROUTES_FORM_ID + "/submissions/?access_token=" + process.env.API_AUTH;
 
   request(url, function(err, response, body){
-    console.log(process.env.ROUTES_FORM_ID)
-    console.log(env.ROUTES_FORM_ID)
-    console.log(process.env.API_AUTH)
-    console.log(condig.API_AUTH)
     // look for this code in our stash
     if(!err && response.statusCode === 200){
       var routes = JSON.parse(body);
